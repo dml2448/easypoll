@@ -48,6 +48,28 @@ class PollService {
             return {};
         });
     }
+
+    getQuestionDetails(questionId) {
+        const url = `${this.baseURL}${this.questionsURL}/${questionId}`
+        return fetch(url, {method: 'GET'}).then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+    
+            return {};
+        });
+    }
+
+    postVote(voteURL) {
+        const url = `${this.baseURL}${voteURL}`
+        return fetch(url, {method: 'POST'}).then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+    
+            return {};
+        });
+    }
 }
 
 const pollService = new PollService();
