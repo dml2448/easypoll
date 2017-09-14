@@ -56,6 +56,28 @@ input[type=text] {
   transition: margin 0.2s ease-out;
 }
 
+.questionDetails .votes {
+  list-style: none;
+  border: 1px solid #3498db;
+  padding: 0;
+}
+
+.questionDetails .votes .vote {
+  padding: 10px;
+  height: 25px;
+  border: 1px solid #3498db;
+}
+
+.questionDetails .selected,
+.questionDetails .votes .vote:hover {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.questionDetails .voteCount {
+  float: right;
+}
+
 button {
   background-color: #428bca;
   border-color: #357ebd;
@@ -70,10 +92,12 @@ button:focus {
   outline: none;
 }
 
+.grey-button {
+  background-color: #bdc3c7;
+  border-color: #bdc3c7;
+  color: #34495e;
+}
+
 .newQuestionBox {
   text-align: center;
 }
-
-
-
-
