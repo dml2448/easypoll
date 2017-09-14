@@ -31,9 +31,12 @@ npm test
 
 ### Screenshots
 
-![Question List](screenshots/questions.png "Question List")
-![Question Detail](screenshots/question_detail.png "Question Detail")
-![Create New Question](screenshots/new_question.png "Create New Question")
+![Question List](https://raw.githubusercontent.com/dml2448/easypoll/master/screenshots/questions.PNG "Question List")
+
+![Question Detail](https://raw.githubusercontent.com/dml2448/easypoll/master/screenshots/question_detail.PNG "Question Detail")
+
+![Create New Question](https://raw.githubusercontent.com/dml2448/easypoll/master/screenshots/new_question.PNG "Create New Question")
+
 
 
 
