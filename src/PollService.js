@@ -37,8 +37,19 @@ class PollService {
             return "";
         });
     }
+
+    getQuestions() {
+        const url = `${this.baseURL}${this.questionsURL}`;
+        return fetch(url, {method: 'GET'}).then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+    
+            return {};
+        });
+    }
 }
 
 const pollService = new PollService();
 
-export default pollService;
+export default pollService
