@@ -1,24 +1,79 @@
-.App {
+body, html {
+  background-color: #ecf0f1;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #343434;
+}
+
+.app {
+  margin: 50px;
+}
+
+.app h1 {
+  text-align: center;
+  color: #676767;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.questionCollection {
+  display: flex;
+  flex-flow: row; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionCard {
+  display: block;
+  margin: 20px;
+  background-color: #3498db;
+  margin: 20px;
+  padding: 10px;
+  width: 250px;
+  height: 154px;
+  border: 1px solid #2980b9;
+  color: #454545;
+  text-decoration: none;
+}
+
+.questionCard h2 {
+  color: #ecf0f1;
+  font-size: 1.6em;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  height: 90px;
+}
+
+.questionCard:hover,
+.questionCard:focus {
+  box-shadow: 3px 3px 3px #777;
+  transition: margin 0.2s ease-out;
+}
+
+button {
+  background-color: #428bca;
+  border-color: #357ebd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  margin: 5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.newQuestionBox {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}

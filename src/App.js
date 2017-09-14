@@ -9,7 +9,7 @@ import NewQuestion from './NewQuestion';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={Questions} />

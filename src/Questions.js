@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import Moment from 'moment';
 
-import pollService from './PollService'
+import pollService from './PollService';
 
 class Questions extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Questions extends Component {
         }
     }
 
-    componentWillMount() {
+    componentWillMount(){
         pollService.getQuestions().then(questions => {
             this.setState({ questions });
         });
@@ -20,7 +21,9 @@ class Questions extends Component {
 
     render() {
         const questionsWidgets = this.state.questions.map((questionObj, index) => {
-            const publishingDate = questionObj.published_at;
+
+            const dateTime = new Date(questionObj.published_at);
+            const publishingDate = Moment(dateTime).format("YYYY-MM-DD");
 
             let url = "#";
             if (questionObj.choices.length > 0) {
@@ -28,14 +31,14 @@ class Questions extends Component {
             }
 
             return (<NavLink to={url} key={index} className="questionCard">
-                <div key={index}>
-                    <h2> {questionObj.question.substr(0, 35)} </h2>
-                    <div className="infoBox">
-                        <div> Published: {publishingDate} </div>
-                        <div> Questions: {questionObj.choices.length} </div>
-                    </div>
-                </div>
-            </NavLink>)
+                        <div key={index}>
+                            <h2> {questionObj.question.substr(0,35)} </h2>
+                            <div className="infoBox">
+                                <div> Published: {publishingDate} </div>
+                                <div> Questions: {questionObj.choices.length} </div>
+                            </div>
+                        </div>
+                    </NavLink>)
         });
 
         return (
@@ -56,4 +59,4 @@ class Questions extends Component {
     }
 }
 
-export default Questions
+export default Questions;
