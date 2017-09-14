@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Poll extends Component {
   render() {
@@ -10,4 +10,4 @@ class Poll extends Component {
   }
 }
 
-export default Poll;
+export default Poll
