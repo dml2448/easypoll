@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import pollService from './PollService'
+import pollService from './service/PollService'
 import App from './App'
 
 pollService.init(() => {

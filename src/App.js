@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
-import './App.css';
+import './style/App.css';
 
-import Questions from './Questions';
-import Poll from './Poll';
-import NewQuestion from './NewQuestion';
+import Questions from './components/Questions';
+import Poll from './components/Poll';
+import NewQuestion from './components/NewQuestion';
 
 class App extends Component {
   render() {

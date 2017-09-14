@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import PropTypes from 'prop-types'
-import pollService from './PollService'
+import pollService from '../service/PollService'
 
 class Poll extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pollService from './PollService'
+import pollService from '../service/PollService'
 
 import PropTypes from 'prop-types'
 

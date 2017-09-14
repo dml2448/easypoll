@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../App';
-import pollService from '../PollService';
+import pollService from '../service/PollService';
 
 function initLocalStorageMock() {
   class LocalStorageMock {

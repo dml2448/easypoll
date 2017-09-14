@@ -17,23 +17,22 @@ class PollService {
                 if (onResult) {
                     onResult();
                 }
-            });
+            });  
         } else {
             this.questionsURL = storedURL;
 
             if (onResult) {
-
                 onResult();
             }
         }
     }
 
     getQuestionsURL() {
-        return fetch(this.baseURL, { method: 'GET' }).then((response) => {
+        return fetch(this.baseURL, {method: 'GET'}).then((response) => {
             if (response.ok) {
                 return response.json();
             }
-
+    
             return "";
         });
     }
@@ -70,8 +69,21 @@ class PollService {
             return {};
         });
     }
+
+    saveQuestion(question) {
+        const url = `${this.baseURL}${this.questionsURL}`;
+        const payload = JSON.stringify(question);
+
+        return fetch(url, {method: 'POST', body: payload}).then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+    
+            return {};
+        });
+    }
 }
 
 const pollService = new PollService();
 
-export default pollService
+export default pollService;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Moment from 'moment';
 
-import pollService from './PollService';
+import pollService from '../service/PollService';
 
 class Questions extends Component {
     constructor(props) {
